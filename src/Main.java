@@ -5,9 +5,12 @@ import OOP.Computer;
 public class Main {
     public static void main(String[] args){
         Computer comp = new Computer();
-        Computer comp1 = new Computer();
+        Computer compOne = new Computer();
 
-        comp.name = "Asus";
+        comp.setName("intel");
+        comp.setHdd(444);
+        compOne.setHdd(322);
+        System.out.println(comp.getHdd());
         comp.on();
         comp.load();
         comp.off();

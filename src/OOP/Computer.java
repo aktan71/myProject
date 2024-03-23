@@ -1,17 +1,52 @@
 package OOP;
 public class Computer {
-    public String name;
-    public int ram;
-    public int hdd;
-    public double weight;
+    private String name;
+    private int ram;
+    private int hdd;
+    private double weight;
+
+    public String getName(){
+        return name;
+    }
+    public void setName(String newName){
+        name = newName;
+    }
+    public int getRam(){
+        return ram;
+    }
+
+    public void setRam(int newRam){
+        if(newRam>0) {
+            ram = newRam;
+        }else {
+            System.out.println("gg");
+        }
+    }
+
+    public int getHdd(){
+        return hdd;
+    }
+    public void setHdd(int newHdd){
+        hdd = newHdd;
+    }
+    public double getWeight(){
+        return weight;
+    }
+    public void setWeight(double newWeight){
+        weight = newWeight;
+    }
 
     public void on(){
-        System.out.println("Я включился" + name);
+        print("Я включился");
     }
     public void off(){
-        System.out.println("Я выключился");
+        print("Я выключился");
     }
     public void load(){
-        System.out.println("Идет загрузка");
+        print("Идет загрузка");
     }
+    private void print(String str){
+        System.out.println(str);
+    }
+
 }
